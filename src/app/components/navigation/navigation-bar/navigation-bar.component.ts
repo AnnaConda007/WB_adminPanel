@@ -6,7 +6,7 @@ import { DashboardComponent } from '../../dashboard/dashboard.component';
   import { NavigationBtnComponent } from '../navigation-btn/navigation-btn.component';
   import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
   import { MatIconModule } from '@angular/material/icon';
-
+import { DataService } from '../../../services/data.service';
 
 @Component({
   selector: 'app-navigation-bar',
@@ -19,12 +19,14 @@ import { DashboardComponent } from '../../dashboard/dashboard.component';
   export class NavigationBarComponent {
     isMobile: boolean = false;
     showSidenav: boolean = true;  
-  
+    navigationsItems
     toggleSidenav() {
       this.showSidenav = !this.showSidenav;
     }
   
-    constructor(private breakpointObserver: BreakpointObserver) {
+    constructor(private breakpointObserver: BreakpointObserver,private dataService: DataService // Инъекция DataService
+    ) {
+      this.navigationsItems = this.dataService.navigationsItems;  
       this.breakpointObserver.observe(Breakpoints.Handset)
         .subscribe(result => {
           this.isMobile = result.matches;
@@ -32,17 +34,7 @@ import { DashboardComponent } from '../../dashboard/dashboard.component';
         });
     }
 
-  navigationsItems: NavigationItem[] = [
-    { path: 'products', label: 'Товары' },
-    { path: 'users', label: 'Пользователи' },
-    { path: 'finance', label: 'Финансы' },
-    { path: 'analytics', label: 'Аналитика' },
-    { path: 'reports', label: 'Отчеты' },
-  ];
- 
+  
 }
 
-interface NavigationItem {
-  path: string;
-  label: string;
-}
+ 

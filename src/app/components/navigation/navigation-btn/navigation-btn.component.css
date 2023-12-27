@@ -1,8 +1,13 @@
-.button-container{
+.button {
     width: 100%;
-    padding: 10px;
+    padding: 25px;
+    font-size: 15px;
+border-radius: 0;
+
 }
 
-.button-container:hover{
-    background-color: rgb(170, 224, 224);
+.mdc-button{ 
+justify-content: flex-start;
 }
+
+ 

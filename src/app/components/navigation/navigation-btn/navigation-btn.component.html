@@ -1,5 +1,5 @@
-<div class="button-container"  *ngFor="let item of navigationsItems" (click)="navigate(item)">
-    <button mat-button   class=" button">
+ 
+    <button mat-button   class=" button" *ngFor="let item of navigationsItems" (click)="navigate(item)">
         {{ item.label }}
       </button>
-</div>
+ 

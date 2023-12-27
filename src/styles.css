@@ -11,14 +11,17 @@ html{
 }
 
  body{
-  height: 100%; 
-  background-color: aqua;
+  height: 100%;  
 }
 
  
 
- app-root{
-  background-color: rgb(176, 127, 255);
+ app-root{ 
   display: block;
   height: 100%;
  }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+ 

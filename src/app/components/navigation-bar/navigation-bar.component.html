@@ -1,3 +1,20 @@
-<nav class="dashboard-nav" *ngFor="let item of navigationsItems">
-    <button (click)="navigate(item)">{{ item.label }}</button>
-</nav>
+ 
+ <mat-drawer-container class="drawer-container">
+    <mat-drawer class="btns-container" mode="side" opened> 
+      
+<div class="button-container"  *ngFor="let item of navigationsItems" (click)="navigate(item)">
+    <button mat-button   class=" button">
+        {{ item.label }}
+      </button>
+</div>
+     
+
+      
+    </mat-drawer>
+    <mat-drawer-content class="content"> 
+        <app-dashboard></app-dashboard>   
+    </mat-drawer-content>
+  </mat-drawer-container>
+  
+
+ 

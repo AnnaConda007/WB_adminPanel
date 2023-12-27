@@ -1,4 +1,4 @@
-:host {
-    background-color: rgb(246, 155, 155);
-     height: 80px;
-}
+:host {    
+     display: flex;
+     justify-content: flex-end;
+padding: 10px;}

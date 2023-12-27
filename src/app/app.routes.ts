@@ -6,20 +6,28 @@ import { ProductsComponent } from './components/sections/products/products.compo
 import { UsersComponent } from './components/sections/users/users.component';
 import { FinanceComponent } from './components/sections/finance/finance.component';
 import { AnalyticsComponent } from './components/sections/analytics/analytics.component';
-
+  
 export const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
     children: [
-    { path: 'reports', component: ReportsComponent },
-    { path: 'products', component: ProductsComponent },
-    { path: 'users', component: UsersComponent },
-    { path: 'finance', component: FinanceComponent },
-    { path: 'analytics', component: AnalyticsComponent }
-  ],
+      {
+        path: 'section', 
+        children: [
+          { path: 'reports', component: ReportsComponent },
+          { path: 'products', component: ProductsComponent },
+          { path: 'users', component: UsersComponent },
+          { path: 'finance', component: FinanceComponent },
+          { path: 'analytics', component: AnalyticsComponent }
+        ]
+      }
+    ],
   },
 ];
+
+
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

@@ -1,16 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, NavigationEnd } from '@angular/router';
-import { ReportsComponent } from '../sections/reports/reports.component';
-import { ProductsComponent } from '../sections/products/products.component';
-import { UsersComponent } from '../sections/users/users.component';
-import { FinanceComponent } from '../sections/finance/finance.component';
-import { AnalyticsComponent } from '../sections/analytics/analytics.component';
+import { Router, NavigationEnd } from '@angular/router'; 
+import { ProductsComponent } from '../sections/products/products.component'; 
 import { CommonModule } from '@angular/common';
-
+import { RouterModule } from '@angular/router';
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [ReportsComponent, CommonModule,ProductsComponent,UsersComponent, FinanceComponent, AnalyticsComponent],
+  imports: [  CommonModule,ProductsComponent, RouterModule],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css',
 })

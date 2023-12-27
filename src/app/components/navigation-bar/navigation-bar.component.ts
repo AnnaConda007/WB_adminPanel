@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
   templateUrl: './navigation-bar.component.html',
   styleUrl: './navigation-bar.component.css',
 })
+
 export class NavigationBarComponent {
   navigationsItems: NavigationItem[] = [
     { path: 'products', label: 'Товары' },
@@ -21,8 +22,9 @@ export class NavigationBarComponent {
   constructor(private router: Router) {}
 
   navigate(item: NavigationItem): void {
-    this.router.navigateByUrl(`/${item.path}`);
+    this.router.navigateByUrl(`section/${item.path}`);
   }
+  
 }
 
 interface NavigationItem {

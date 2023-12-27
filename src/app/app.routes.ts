@@ -6,8 +6,10 @@ import { ProductsComponent } from './components/sections/products/products.compo
 import { UsersComponent } from './components/sections/users/users.component';
 import { FinanceComponent } from './components/sections/finance/finance.component';
 import { AnalyticsComponent } from './components/sections/analytics/analytics.component';
-  
+import { AuthorizationComponent } from './components/authorization/authorization.component';
 export const routes: Routes = [
+  {    path:"auth", component:AuthorizationComponent
+},
   {
     path: '',
     component: HomeComponent,

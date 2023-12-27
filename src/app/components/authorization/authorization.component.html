@@ -1,0 +1,25 @@
+<form (ngSubmit)="onSubmit()" #myForm="ngForm">
+  <mat-form-field appearance="fill">
+    <mat-label>Логин</mat-label>
+    <input
+      matInput
+      [(ngModel)]="login"
+      name="login"
+      placeholder="user"
+      autocomplete="off"
+    />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Пароль</mat-label>
+    <input
+      matInput
+      [(ngModel)]="password"
+      name="password"
+      placeholder="123456"
+      autocomplete="off"
+    />
+  </mat-form-field>
+  <div *ngIf="errorMessage">{{ errorMessage }}</div>
+  <button mat-raised-button color="primary" type="submit">Войти</button>
+</form>

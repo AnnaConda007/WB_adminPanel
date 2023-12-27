@@ -1,12 +1,16 @@
-import { Injectable } from '@angular/core';
+import { Injectable, PLATFORM_ID, Inject } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class DataService {
-   login = "user";
-   password="123456"
-   navigationsItems: NavigationItem[] = [
+  login = 'user';
+  password = '123456';
+  isAuthorized!: boolean;
+
+  navigationsItems: NavigationItem[] = [
     { path: 'products', label: 'Товары' },
     { path: 'users', label: 'Пользователи' },
     { path: 'finance', label: 'Финансы' },
@@ -14,7 +18,14 @@ export class DataService {
     { path: 'reports', label: 'Отчеты' },
   ];
 
-  constructor() { }
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {
+    //  "???""
+    if (isPlatformBrowser(this.platformId)) {
+      this.isAuthorized = !!localStorage.getItem('isAuthorized');
+    } else {
+      this.isAuthorized = false;
+    }
+  }
 }
 
 interface NavigationItem {

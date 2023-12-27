@@ -11,8 +11,11 @@ import { Router } from '@angular/router';
 })
 export class NavigationBarComponent {
   navigationsItems: NavigationItem[] = [
+    { path: 'products', label: 'Товары' },
+    { path: 'users', label: 'Пользователи' },
+    { path: 'finance', label: 'Финансы' },
+    { path: 'analytics', label: 'Аналитика' },
     { path: 'reports', label: 'Отчеты' },
-    { path: 'tasks', label: 'Задачи' },
   ];
 
   constructor(private router: Router) {}

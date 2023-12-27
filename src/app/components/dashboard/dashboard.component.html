@@ -1,0 +1,6 @@
+ <p>dashboard works!</p>
+<app-reports *ngIf="currentRoute.includes('/reports')"></app-reports>
+<app-products *ngIf="currentRoute.includes('/products')"></app-products>
+<app-users *ngIf="currentRoute.includes('/users')"></app-users>
+<app-finance *ngIf="currentRoute.includes('/finance')"></app-finance>
+<app-analytics></app-analytics>

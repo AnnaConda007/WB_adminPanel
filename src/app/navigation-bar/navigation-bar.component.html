@@ -1,1 +1,3 @@
-<p>navigation-bar works!</p>
+<div *ngFor="let item of navigationsItems">
+    <button (click)="navigate(item)">{{ item.label }}</button>
+</div>

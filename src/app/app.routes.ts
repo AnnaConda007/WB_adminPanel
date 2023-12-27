@@ -1,11 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
 import { HomeComponent } from './home/home.component';
+import { ReportsComponent } from './reports/reports.component';
 
 export const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'navigation', component: NavigationBarComponent },
+  {
+    path: '',
+    component: HomeComponent,
+    children: [{ path: 'reports', component: ReportsComponent }],
+  },
 ];
 
 @NgModule({

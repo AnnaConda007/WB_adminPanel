@@ -9,13 +9,13 @@ height: 100%; ;
   }
 
   .btns-container{
-    background-color: rgb(0, 26, 255);
-    max-width: 250px;
+     max-width: 250px;
     
   }
 
-.content{
+.content{ 
     background-color: aqua;
 }
 
 
+ 

@@ -1,0 +1,10 @@
+
+ :host{
+   flex-grow: 1;
+    background-color: aqua;
+ }
+
+ main{
+    display: flex;
+    height: 100%;
+ }

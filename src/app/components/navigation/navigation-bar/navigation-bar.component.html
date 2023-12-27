@@ -1,15 +1,7 @@
  
  <mat-drawer-container class="drawer-container">
     <mat-drawer class="btns-container" mode="side" opened> 
-      
-<div class="button-container"  *ngFor="let item of navigationsItems" (click)="navigate(item)">
-    <button mat-button   class=" button">
-        {{ item.label }}
-      </button>
-</div>
-     
-
-      
+        <app-navigation-btn [navigationsItems]="navigationsItems"></app-navigation-btn>
     </mat-drawer>
     <mat-drawer-content class="content"> 
         <app-dashboard></app-dashboard>   

@@ -1,15 +1,17 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Router } from '@angular/router';
-import { MatSidenavModule } from '@angular/material/sidenav';
+ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
-import { DashboardComponent } from '../dashboard/dashboard.component';
+import { DashboardComponent } from '../../dashboard/dashboard.component';
+  import { NavigationBtnComponent } from '../navigation-btn/navigation-btn.component';
+
+
 @Component({
   selector: 'app-navigation-bar',
   standalone: true,
-  imports: [CommonModule, MatButtonModule, MatSidenavModule, DashboardComponent], // Замените MatMenuModule на MatSidenavModule
+  imports: [CommonModule, MatButtonModule, MatSidenavModule, DashboardComponent,NavigationBtnComponent],  
   templateUrl: './navigation-bar.component.html',
-  styleUrls: ['./navigation-bar.component.css'] // Исправьте опечатку: styleUrl -> styleUrls
+  styleUrls: ['./navigation-bar.component.css']  
 })
 export class NavigationBarComponent {
   navigationsItems: NavigationItem[] = [
@@ -19,12 +21,7 @@ export class NavigationBarComponent {
     { path: 'analytics', label: 'Аналитика' },
     { path: 'reports', label: 'Отчеты' },
   ];
-
-  constructor(private router: Router) {}
-
-  navigate(item: NavigationItem): void {
-    this.router.navigateByUrl(`section/${item.path}`);
-  }
+ 
 }
 
 interface NavigationItem {

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavigationBarComponent } from '../navigation-bar/navigation-bar.component';
+import { NavigationBarComponent } from '../navigation/navigation-bar/navigation-bar.component';
 import { DashboardComponent } from '../dashboard/dashboard.component';
 @Component({
   selector: 'app-home',

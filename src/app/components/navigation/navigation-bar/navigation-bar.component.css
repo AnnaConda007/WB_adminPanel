@@ -4,13 +4,9 @@
     width: 100%;
 }
 
-
-
 .drawer-container {
 height: 100%; ;
   }
-
-
 
   .btns-container{
     background-color: rgb(0, 26, 255);
@@ -23,13 +19,3 @@ height: 100%; ;
 }
 
 
-.button-container{
-    width: 100%;
-    padding: 10px;
-
-}
-
-
-.button-container:hover{
-    background-color: rgb(170, 224, 224);
-}

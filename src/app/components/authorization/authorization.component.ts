@@ -40,6 +40,6 @@ export class AuthorizationComponent {
     }
     this.dataService.isAuthorized = true;
     localStorage.setItem('isAuthorized', 'true');
-    this.router.navigateByUrl(``);
+    this.router.navigateByUrl(`/section/products`);
   }
 }

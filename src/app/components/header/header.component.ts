@@ -22,5 +22,6 @@ export class HeaderComponent {
     this.data.isAuthorized = false;
     localStorage.setItem('isAuthorized', '');
     this.router.navigateByUrl(`auth`);
-   }
+    this.isAuth = false;
+  }
 }

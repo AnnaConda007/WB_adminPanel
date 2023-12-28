@@ -1,10 +1,11 @@
 :host {
   display: flex;
   justify-content: flex-end;
-  padding: 10px;
   background-color: var(--base-color);
 }
 
 .mat-mdc-raised-button:not(:disabled) {
   background-color: var(--primary-сolor);
+  color: white;
+  margin: 10px;
 }

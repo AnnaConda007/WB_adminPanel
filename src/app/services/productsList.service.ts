@@ -126,6 +126,11 @@ export class ProductService {
     },
   ];
 
+  delitePoduct(id: number): IproductList[] {
+    const filteredPoducts = this.products.filter((product) => product.id != id);
+    this.products = filteredPoducts;
+    return filteredPoducts;
+  }
   constructor() {}
 }
 

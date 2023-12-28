@@ -4,13 +4,12 @@ import {
   IproductList,
 } from '../../../services/productsList.service';
 import { MatTableModule } from '@angular/material/table';
-import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from '@angular/material/icon';
+import { DeliteBtnComponent } from '../../delite-btn/delite-btn.component';
 
 @Component({
   selector: 'app-products',
   standalone: true,
-  imports: [MatTableModule, MatButtonModule, MatIconModule],
+  imports: [MatTableModule, DeliteBtnComponent],
   templateUrl: './products.component.html',
   styleUrl: './products.component.css',
 })
@@ -28,14 +27,10 @@ export class ProductsComponent {
 
   constructor(private productList: ProductService) {
     this.products = this.productList.products;
-    console.log(this.products);
-    this.dataSource = this.products;
+     this.dataSource = this.products;
   }
 
   delitePoduct(id: number): void {
-    this.productList.products = this.productList.products.filter(
-      (product) => product.id != id
-    );
-    this.dataSource = this.productList.products;
+    this.dataSource = this.productList.delitePoduct(id);
   }
 }

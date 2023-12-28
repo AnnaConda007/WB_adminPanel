@@ -1,21 +1,15 @@
-:host{
-    height: 100%;
-    background-color: rgb(217, 181, 138);
-    width: 100%;
+:host {
+  width: 100%;
 }
 
 .drawer-container {
-height: 100%; ;
-  }
-
-  .btns-container{
-     max-width: 250px;
-    
-  }
-
-.content{ 
-    background-color: aqua;
+  height: 100%;
 }
 
-
- 
+.btns-container {
+  max-width: 250px;
+  background-color: var(--primary-сolor);
+}
+.hamburger-icon {
+  color: var(--primary-сolor);
+}

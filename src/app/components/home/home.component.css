@@ -15,12 +15,12 @@ main {
 .year {
   padding-left: 20px;
   font-weight: bold;
-  background-color: ghostwhite;
+  background-color: var(--base-color);
 }
 
 .th-head {
   margin: 0;
-  background-color: ghostwhite;
+  background-color: var(--base-color);
   letter-spacing: var(--mat-table-header-headline-tracking);
   font-weight: bold;
   padding-left: 20px;
@@ -33,5 +33,5 @@ main {
 }
 
 .mat-mdc-row:hover {
-  background-color: rgb(225, 225, 240);
+  background-color: var(--hover-color);
 }

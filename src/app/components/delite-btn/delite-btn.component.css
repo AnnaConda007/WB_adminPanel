@@ -1,5 +1,7 @@
 .delite-button {
   height: 25px;
   width: 25px;
-  color: rgb(236, 159, 159);
+  color: var(--warn-color);
+  background-color: transparent;
+  box-shadow: none;
 }

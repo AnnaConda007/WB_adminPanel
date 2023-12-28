@@ -6,22 +6,29 @@
   padding: 0;
   box-sizing: border-box;
 }
-html{
-   height: 100%;
+html {
+  height: 100%;
 }
 
- body{
-  height: 100%;  
+body {
+  height: 100%;
+}
+:root {
+  --primary-сolor: rgb(188, 188, 234);
+  --base-color: rgb(234, 234, 241);
+  --hover-color: rgb(235, 243, 233);
+  --warn-color: rgb(242, 106, 106);
 }
 
- 
-
- app-root{ 
+app-root {
   display: block;
   height: 100%;
- }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
-
- 
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

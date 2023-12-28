@@ -1,13 +1,26 @@
- <mat-drawer-container class="drawer-container">
-    <mat-drawer class="btns-container" [mode]="isMobile ? 'over' : 'side'" [(opened)]="showSidenav">
-      <app-navigation-btn (click)="toggleSidenav()" [navigationsItems]="navigationsItems"></app-navigation-btn>
-    </mat-drawer>
-    <mat-drawer-content class="content">
-       <div class="example-button-container">
-        <button *ngIf="isMobile" (click)="toggleSidenav()" mat-icon-button color="accent" aria-label="Example icon button with a menu icon">
-            <mat-icon>menu</mat-icon>
-          </button>
-      </div>
-      <app-dashboard></app-dashboard>
-    </mat-drawer-content>
-  </mat-drawer-container>
+<mat-drawer-container class="drawer-container">
+  <mat-drawer
+    class="btns-container"
+    [mode]="isMobile ? 'over' : 'side'"
+    [(opened)]="showSidenav"
+  >
+    <app-navigation-btn
+      (click)="toggleSidenav()"
+      [navigationsItems]="navigationsItems"
+    ></app-navigation-btn>
+  </mat-drawer>
+  <mat-drawer-content class="content">
+    <div class="example-button-container">
+      <button
+        *ngIf="isMobile"
+        (click)="toggleSidenav()"
+        mat-icon-button
+        color="accent"
+        aria-label="Example icon button with a menu icon"
+      >
+        <mat-icon class="hamburger-icon">menu</mat-icon>
+      </button>
+    </div>
+    <app-dashboard></app-dashboard>
+  </mat-drawer-content>
+</mat-drawer-container>

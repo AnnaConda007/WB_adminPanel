@@ -27,6 +27,7 @@ export class NavigationBarComponent {
   showSidenav: boolean = true;
   navigationsItems;
   toggleSidenav() {
+    if (!this.isMobile) return;
     this.showSidenav = !this.showSidenav;
   }
 

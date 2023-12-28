@@ -11,7 +11,7 @@ import { DeliteBtnComponent } from '../../delite-btn/delite-btn.component';
   standalone: true,
   imports: [MatTableModule, DeliteBtnComponent],
   templateUrl: './products.component.html',
-  styleUrl: './products.component.css',
+  styleUrls: ['./products.component.css', '../../home/home.component.css'],
 })
 export class ProductsComponent {
   products!: IproductList[];
@@ -27,7 +27,7 @@ export class ProductsComponent {
 
   constructor(private productList: ProductService) {
     this.products = this.productList.products;
-     this.dataSource = this.products;
+    this.dataSource = this.products;
   }
 
   delitePoduct(id: number): void {

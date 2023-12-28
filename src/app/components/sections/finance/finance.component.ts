@@ -15,7 +15,7 @@ import { FinanceShareholdersTableComponent } from './financeSections/finance-sha
     FinanceShareholdersTableComponent,
   ],
   templateUrl: './finance.component.html',
-  styleUrl: './finance.component.css',
+  styleUrls: ['./finance.component.css', '../../home/home.component.css'],
 })
 export class FinanceComponent {
   finance!: IFinanceData;

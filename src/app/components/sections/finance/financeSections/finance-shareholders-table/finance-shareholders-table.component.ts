@@ -12,7 +12,7 @@ import {
   templateUrl: './finance-shareholders-table.component.html',
   styleUrls: [
     './finance-shareholders-table.component.css',
-    '../../finance.component.css',
+    '../../../../home/home.component.css',
   ],
 })
 export class FinanceShareholdersTableComponent {

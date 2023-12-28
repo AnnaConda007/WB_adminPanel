@@ -12,7 +12,7 @@ import {
   templateUrl: './finance-annual-summary-table.component.html',
   styleUrls: [
     './finance-annual-summary-table.component.css',
-    '../../finance.component.css',
+    '../../../../home/home.component.css',
   ],
 })
 export class FinanceAnnualSummaryTableComponent {

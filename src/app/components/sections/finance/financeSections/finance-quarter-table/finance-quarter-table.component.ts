@@ -13,7 +13,7 @@ import {
   templateUrl: './finance-quarter-table.component.html',
   styleUrls: [
     './finance-quarter-table.component.css',
-    '../../finance.component.css',
+    '../../../../home/home.component.css',
   ],
 })
 export class FinanceQuarterTableComponent {

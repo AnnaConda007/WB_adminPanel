@@ -8,7 +8,7 @@ import { DeliteBtnComponent } from '../../delite-btn/delite-btn.component';
   standalone: true,
   imports: [MatTableModule, DeliteBtnComponent],
   templateUrl: './users.component.html',
-  styleUrl: './users.component.css',
+  styleUrls: ['./users.component.css', '../../home/home.component.css'],
 })
 export class UsersComponent {
   usersList!: IUsers[];

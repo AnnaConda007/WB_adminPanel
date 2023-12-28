@@ -1,9 +1,37 @@
+:host {
+  flex-grow: 1;
+}
 
- :host{
-   flex-grow: 1; 
- }
+main {
+  display: flex;
+  height: 100%;
+}
+.section-title {
+  letter-spacing: var(--mat-table-header-headline-tracking);
+  font-weight: bold;
+  padding-left: 20px;
+  letter-spacing: 3px;
+}
+.year {
+  padding-left: 20px;
+  font-weight: bold;
+  background-color: ghostwhite;
+}
 
- main{
-    display: flex;
-    height: 100%;
- }
+.th-head {
+  margin: 0;
+  background-color: ghostwhite;
+  letter-spacing: var(--mat-table-header-headline-tracking);
+  font-weight: bold;
+  padding-left: 20px;
+}
+
+.tables-container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.mat-mdc-row:hover {
+  background-color: rgb(225, 225, 240);
+}

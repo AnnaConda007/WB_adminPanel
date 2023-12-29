@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
-import { DataService } from '../../services/data.service';
+import { DataService } from '../../services/mainAppData.service';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 

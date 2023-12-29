@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, NavigationEnd } from '@angular/router'; 
-import { ProductsComponent } from '../sections/products/products.component'; 
+import { Router, NavigationEnd } from '@angular/router';
+import { ProductsComponent } from '../sections/products/products.component';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [  CommonModule,ProductsComponent, RouterModule],
+  imports: [CommonModule, ProductsComponent, RouterModule],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css',
 })
@@ -16,7 +16,7 @@ export class DashboardComponent implements OnInit {
   constructor(private router: Router) {}
 
   ngOnInit() {
-    // аналог useEffect(() => {}, [])
+    // аналог useEffect(() => {}, [])   разобрать тему позже **
     this.router.events.subscribe((event) => {
       // подписка на ВСЕ события маршрутизации
       if (event instanceof NavigationEnd) {

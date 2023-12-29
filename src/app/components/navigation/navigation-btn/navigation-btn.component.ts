@@ -1,4 +1,4 @@
- import { Component, Input  } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
@@ -8,17 +8,16 @@ import { MatButtonModule } from '@angular/material/button';
   standalone: true,
   imports: [CommonModule, MatButtonModule],
   templateUrl: './navigation-btn.component.html',
-  styleUrls: ['./navigation-btn.component.css']
+  styleUrls: ['./navigation-btn.component.css'],
 })
 export class NavigationBtnComponent {
-  @Input() navigationsItems: NavigationItem[] = [];  
-  
+  @Input() navigationsItems: NavigationItem[] = [];
+
   constructor(private router: Router) {}
 
   navigate(item: NavigationItem): void {
     this.router.navigateByUrl(`section/${item.path}`);
   }
-
 }
 
 interface NavigationItem {

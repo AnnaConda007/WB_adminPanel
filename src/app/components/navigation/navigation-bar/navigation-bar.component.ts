@@ -6,7 +6,7 @@ import { DashboardComponent } from '../../dashboard/dashboard.component';
 import { NavigationBtnComponent } from '../navigation-btn/navigation-btn.component';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { MatIconModule } from '@angular/material/icon';
-import { DataService } from '../../../services/data.service';
+import { DataService } from '../../../services/mainAppData.service';
 
 @Component({
   selector: 'app-navigation-bar',

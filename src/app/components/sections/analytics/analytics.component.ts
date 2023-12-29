@@ -11,7 +11,7 @@ import { AnalyticsTopSellingTableComponent } from './analiticsSections/analytics
     AnalyticsTopSellingTableComponent,
   ],
   templateUrl: './analytics.component.html',
-  styleUrls: ['./analytics.component.css', "../../home/home.component.css"],
+  styleUrls: ['./analytics.component.css', '../../home/home.component.css'],
 })
 export class AnalyticsComponent {
   year!: number;

@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
-import { DataService } from '../../services/data.service';
+import { DataService } from '../../services/mainAppData.service';
 import { CommonModule } from '@angular/common';
 
 @Component({

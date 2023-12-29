@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavigationBarComponent } from '../navigation/navigation-bar/navigation-bar.component';
 import { DashboardComponent } from '../dashboard/dashboard.component';
-import { DataService } from '../../services/data.service';
+import { DataService } from '../../services/mainAppData.service';
 import { Router } from '@angular/router';
 
 @Component({

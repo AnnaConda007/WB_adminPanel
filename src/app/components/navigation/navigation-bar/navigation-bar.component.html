@@ -4,10 +4,12 @@
     [mode]="isMobile ? 'over' : 'side'"
     [(opened)]="showSidenav"
   >
-    <app-navigation-btn
-      (click)="toggleSidenav()"
-      [navigationsItems]="navigationsItems"
-    ></app-navigation-btn>
+    <nav>
+      <app-navigation-btn
+        (click)="toggleSidenav()"
+        [navigationsItems]="navigationsItems"
+      ></app-navigation-btn>
+    </nav>
   </mat-drawer>
   <mat-drawer-content class="content">
     <div class="example-button-container">

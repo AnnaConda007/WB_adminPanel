@@ -3,7 +3,6 @@ import { MatButtonModule } from '@angular/material/button';
 import { DataService } from '../../services/data.service';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
-import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -14,14 +13,11 @@ import { Subscription } from 'rxjs';
 })
 export class HeaderComponent {
   isAuth!: boolean;
-  authSubscription!: Subscription;
 
   constructor(private dataService: DataService, private router: Router) {
-    this.authSubscription = this.dataService.isAuthorized.subscribe(
-      (isAuth) => {
-        this.isAuth = isAuth;
-      }
-    );
+    this.dataService.isAuthorized.subscribe((isAuth) => {
+      this.isAuth = isAuth;
+    });
   }
 
   logOut() {

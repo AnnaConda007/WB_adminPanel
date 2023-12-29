@@ -3,6 +3,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { DataService } from '../../services/data.service';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -13,15 +14,18 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent {
   isAuth!: boolean;
+  authSubscription!: Subscription;
 
-  constructor(private data: DataService, private router: Router) {
-    this.isAuth = data.isAuthorized;
+  constructor(private dataService: DataService, private router: Router) {
+    this.authSubscription = this.dataService.isAuthorized.subscribe(
+      (isAuth) => {
+        this.isAuth = isAuth;
+      }
+    );
   }
 
   logOut() {
-    this.data.isAuthorized = false;
-    localStorage.setItem('isAuthorized', '');
+    this.dataService.setAuthorization(false);
     this.router.navigateByUrl(`auth`);
-    this.isAuth = false;
   }
 }

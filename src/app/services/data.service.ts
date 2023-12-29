@@ -1,14 +1,14 @@
 import { Injectable, PLATFORM_ID, Inject } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { BehaviorSubject } from 'rxjs';
-
+ 
 @Injectable({
   providedIn: 'root',
 })
 export class DataService {
   login = 'user';
   password = '123456';
-  isAuthorized!: boolean;
+  authorized = new BehaviorSubject(false);
 
   navigationsItems: NavigationItem[] = [
     { path: 'products', label: 'Товары' },
@@ -19,12 +19,18 @@ export class DataService {
   ];
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {
-    //  "???""
     if (isPlatformBrowser(this.platformId)) {
-      this.isAuthorized = !!localStorage.getItem('isAuthorized');
-    } else {
-      this.isAuthorized = false;
+      const isAuth = !!localStorage.getItem('isAuthorized');
+      this.authorized.next(isAuth);
     }
+  }
+  get isAuthorized() {
+    return this.authorized.asObservable();
+  }
+
+  setAuthorization(value: boolean) {
+    this.authorized.next(value);
+    localStorage.setItem('isAuthorized', value ? 'true' : '');
   }
 }
 

@@ -24,6 +24,7 @@ export class AuthorizationComponent {
   login: string = '';
   password: string = '';
   errorMessage: string = '';
+
   constructor(private router: Router, private dataService: DataService) {}
 
   validate(): boolean {
@@ -38,8 +39,7 @@ export class AuthorizationComponent {
       this.errorMessage = 'неверный email или пароль';
       return;
     }
-    this.dataService.isAuthorized = true;
-    localStorage.setItem('isAuthorized', 'true');
+    this.dataService.setAuthorization(true);
     this.router.navigateByUrl(`/section/products`);
   }
 }
